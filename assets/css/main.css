@@ -2,6 +2,7 @@
 
 :root {
     --primary: #ff6b81;
+    scroll-padding-top: 92.5px;
 }
 
 html {
@@ -1415,9 +1416,9 @@ ol {
     .header .mobile-menu-btn .toggler-icon {
         background-color: #fff
     }
-    .header .button {
+    /* .header .button {
         margin: 0 !important
-    }
+    } */
     .header .navbar-collapse {
         position: absolute;
         top: 67px !important;
@@ -2515,7 +2516,7 @@ ol {
 
 @media only screen and (max-width:767px) {
     .testimonials .single-testimonial {
-        padding: 0 10px 20px 20px
+        padding: 0 10px 20px 10px
     }
 }
 
