@@ -71,7 +71,7 @@
     });
 
     // WOW active
-    new WOW().init();
+    // new WOW().init();
 
     let filterButtons = document.querySelectorAll('.portfolio-btn-wrapper button');
     filterButtons.forEach(e =>
