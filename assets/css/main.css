@@ -1,11 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
-:root {
-    --primary: #ff6b81;
-    scroll-padding-top: 92.5px;
-}
-
 html {
+    --primary: #ff6b81;
+    scroll-padding-top: 72px;
     scroll-behavior: smooth;
     font-size: 14px;
 }
@@ -13,6 +10,12 @@ html {
 @media screen and (min-width: 1280px) { html { font-size: 15px; } }
 @media screen and (min-width: 1440px) { html { font-size: 16px; } }
 @media screen and (min-width: 1600px) { html { font-size: 18px; } }
+
+@media only screen and (max-width: 1440px) {
+    html {
+        scroll-padding-top: 4.5rem;
+    }
+}
 
 body {
     font-family: inter, sans-serif;
@@ -1747,8 +1750,8 @@ ol {
     display: block;
     margin: 5px 0;
     position: relative;
-    -webkit-transition: all .3s ease-out 0s;
-    transition: all .3s ease-out 0s
+    -webkit-transition: all 0s ease-out 0s;
+    transition: all 0s ease-out 0s
 }
 
 .mobile-menu-btn.active .toggler-icon:nth-of-type(1) {
@@ -3821,6 +3824,22 @@ blockquote span {
 }
 
 /* contact CSS */
+.contact-section {
+    scroll-margin-top: 30px;
+}
+
+@media only screen and (max-width:768px) {
+    .contact-section {
+        scroll-margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .contact-section {
+        scroll-margin-top: 30px;
+    }
+}
+
 .contact-form-wrapper .contact-form .primary-btn {
     background: var(--primary);
     color: #fff;
@@ -3860,11 +3879,11 @@ blockquote span {
 }
 
 .contact-section .contact-item-wrapper .contact-item {
+    height: 100%;
     display: flex;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     background: #fff;
-    margin-bottom: 30px;
     padding: 20px 30px;
     -webkit-transition: all .3s ease-out 0s;
     -moz-transition: all .3s ease-out 0s;
@@ -4028,317 +4047,6 @@ blockquote span {
 }
 
 .map-style-9 { margin-top: -130px }
-
-/* .contact-us {
-    position: relative;
-    background-color: #fff
-}
-
-.contact-us .section-title {
-    margin-bottom: 50px
-}
-
-.contact-us .contact-info .single-info {
-    margin-top: 30px;
-    position: relative;
-    padding: 40px;
-    padding-left: 100px;
-    border-radius: 8px;
-    overflow: hidden;
-    -webkit-box-shadow: 0 1px 20px 0 rgba(32, 32, 32, .11);
-    box-shadow: 0 1px 20px 0 rgba(32, 32, 32, .11);
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease
-}
-
-.contact-us .contact-info .single-info:hover {
-    background-color: #ff6b81
-}
-
-.contact-us .contact-info .single-info:hover i {
-    color: #fff
-}
-
-.contact-us .contact-info .single-info:hover h3 {
-    color: #fff
-}
-
-.contact-us .contact-info .single-info:hover ul li {
-    color: #fff
-}
-
-.contact-us .contact-info .single-info:hover ul li a {
-    color: #fff
-}
-
-.contact-us .contact-info .single-info:hover ul li a:hover {
-    opacity: .8 !important;
-    color: #fff
-}
-
-.contact-us .contact-info .single-info i {
-    font-size: 30px;
-    color: #ff6b81;
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease
-}
-
-.contact-us .contact-info .single-info h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #081828;
-    margin-bottom: 15px;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease
-}
-
-.contact-us .contact-info .single-info ul li {
-    display: block;
-    margin-bottom: 2px;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    font-weight: 500
-}
-
-.contact-us .contact-info .single-info ul li:last-child {
-    margin: 0
-}
-
-.contact-us .contact-info .single-info ul li a {
-    color: #888;
-    font-weight: 500;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease
-}
-
-.contact-us .contact-info .single-info ul li a:hover {
-    color: #ff6b81
-}
-
-.contact-form-head {
-    background-image: url(../images/contact/contact-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 2
-}
-
-.contact-form-head::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 60%;
-    background-color: #ff6b81;
-    z-index: -1
-}
-
-@media only screen and (min-width:768px) and (max-width:991px),
-(max-width:767px) {
-    .contact-form-head::before {
-        width: 100%
-    }
-}
-
-.contact-form-head .contact-inner-title h2 {
-    font-size: 30px;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 10px;
-    color: #fff
-}
-
-@media only screen and (min-width:768px) and (max-width:991px) {
-    .contact-form-head .contact-inner-title h2 {
-        font-size: 25px;
-        line-height: 32px
-    }
-}
-
-@media only screen and (max-width:767px) {
-    .contact-form-head .contact-inner-title h2 {
-        font-size: 20px;
-        line-height: 30px
-    }
-}
-
-.contact-form-head .contact-inner-title p {
-    color: #fff
-}
-
-.contact-form-head .contact-inner-title .question {
-    display: block;
-    min-height: 70px;
-    margin-top: 40px
-}
-
-.contact-form-head .contact-inner-title .question img {
-    height: 70px;
-    width: 70px;
-    border-radius: 70px;
-    float: left;
-    margin-right: 20px
-}
-
-.contact-form-head .contact-inner-title .question h4 {
-    font-size: 20px;
-    font-weight: 600;
-    padding-top: 15px;
-    color: #fff
-}
-
-.contact-form-head .contact-inner-title .question h4 span {
-    font-size: 13px;
-    font-weight: 500;
-    display: block;
-    margin-bottom: 5px
-}
-
-.contact-form-head .contact-inner-title .day-list {
-    display: block;
-    margin-top: 40px
-}
-
-.contact-form-head .contact-inner-title .day-list li {
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 3px;
-    display: block
-}
-
-.contact-form-head .contact-inner-title .day-list li:last-child {
-    margin: 0
-}
-
-.contact-form-head .contact-inner-title .call-back {
-    font-size: 15px;
-    font-weight: 500;
-    color: #fff;
-    display: inline-block;
-    margin-top: 30px;
-    text-transform: capitalize
-}
-
-.contact-form-head .contact-inner-title .call-back i {
-    font-size: 15px;
-    display: inline-block;
-    margin-left: 5px
-}
-
-.contact-form-head .form-main {
-    padding: 50px;
-    background-color: #fff;
-    -webkit-box-shadow: 0 1px 30px 0 rgba(32, 32, 32, .11);
-    box-shadow: 0 1px 30px 0 rgba(32, 32, 32, .11);
-    border-radius: 8px
-}
-
-@media only screen and (min-width:768px) and (max-width:991px),
-(max-width:767px) {
-    .contact-form-head .form-main {
-        padding: 35px;
-        margin-top: 40px
-    }
-}
-
-.contact-form-head .form-main .form-title {
-    margin-bottom: 30px
-}
-
-.contact-form-head .form-main .form-title h2 {
-    margin-bottom: 35px;
-    font-size: 22px
-}
-
-.contact-form-head .form-main .form-title p {
-    font-size: 16px
-}
-
-.contact-form-head .form-main .form .form-group {
-    margin-bottom: 15px;
-    display: block
-}
-
-.contact-form-head .form-main .form .form-group input {
-    height: 52px;
-    line-height: 52px;
-    width: 100%;
-    border: 1px solid #e6e2f5;
-    padding: 0 20px;
-    color: #333;
-    font-weight: 400;
-    border-radius: 5px;
-    background-color: #f9f9f9
-}
-
-.contact-form-head .form-main .form .form-group textarea {
-    height: 180px;
-    width: 100%;
-    border: 1px solid #e6e2f5;
-    padding: 15px 20px;
-    color: #333;
-    resize: none;
-    font-weight: 400;
-    resize: vertical;
-    border-radius: 5px;
-    background-color: #f9f9f9
-}
-
-.contact-form-head .form-main .form .form-group.button {
-    width: 100%;
-    margin-bottom: 0
-}
-
-.contact-form-head .form-main .form .form-group.button .btn {
-    height: 50px;
-    border: none;
-    width: 100%
-}
-
-.map-section {
-    background-color: #f9f9f9
-}
-
-.map-section .mapouter {
-    height: 500px
-}
-
-.map-section .mapouter .gmap_canvas {
-    height: 500px
-}
-
-.map-section .mapouter .gmap_canvas iframe {
-    height: 500px
-}
-
-@media only screen and (min-width:768px) and (max-width:991px) {
-    .map-section .mapouter {
-        height: 400px
-    }
-    .map-section .mapouter .gmap_canvas {
-        height: 400px
-    }
-    .map-section .mapouter .gmap_canvas iframe {
-        height: 400px
-    }
-}
-
-@media only screen and (max-width:767px) {
-    .map-section .mapouter {
-        height: 300px
-    }
-    .map-section .mapouter .gmap_canvas {
-        height: 300px
-    }
-    .map-section .mapouter .gmap_canvas iframe {
-        height: 300px
-    }
-} */
 
 .error-area {
     height: 100vh;
@@ -4537,7 +4245,7 @@ blockquote span {
 }
 
 @media only screen and (max-width:480px) {
-    .footer .footer-text h3 { font-size: 1.75rem; }
+    .footer .footer-text h3 { font-size: 1.5rem; }
 }
 
 @media only screen and (max-width:380px) {

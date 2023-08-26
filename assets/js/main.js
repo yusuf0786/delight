@@ -10,7 +10,6 @@
         document.querySelector('.preloader').style.display = 'none';
     }
 
-
     /*=====================================
     Sticky
     ======================================= */
@@ -57,6 +56,13 @@
 
     window.document.addEventListener('scroll', onScroll);
     
+    //===== mobile-menu-btn
+    let navbarToggler = document.querySelector(".mobile-menu-btn");
+    let navBtn = document.querySelector(".delight-navbar-collapse");
+    navbarToggler.addEventListener('click', function () {
+        navbarToggler.classList.toggle("active");
+    });
+
     // for menu scroll 
     var pageLink = document.querySelectorAll('.page-scroll');
 
@@ -67,6 +73,8 @@
                 behavior: 'smooth',
                 offsetTop: 1 - 60,
             });
+            navbarToggler.classList.remove("active");
+            navBtn.classList.remove("show")
         });
     });
 
@@ -98,10 +106,4 @@
         };
     };
 
-    //===== mobile-menu-btn
-    let navbarToggler = document.querySelector(".mobile-menu-btn");
-    navbarToggler.addEventListener('click', function () {
-        navbarToggler.classList.toggle("active");
-    });
-    
 })();
