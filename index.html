@@ -190,9 +190,20 @@
 
 <style>
 /* Featured Products Section */
+.featured-products-wrapper { padding-top: 100px; }
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .featured-products-wrapper { padding-top: 60px; }
+}
+
+@media only screen and (max-width:767px) {
+    .featured-products-wrapper { padding-top: 50px; }
+}
+
 .featured-products-slider-text {
 	position: relative;
 	height: 100%;
+    padding-bottom: 2rem;
 }
 .featured-products-slider-text-slides-cont {
 	display: none;
@@ -224,7 +235,8 @@
 }
 .featured-products-slider-text-slide {
 	position: relative;
-	padding: 41.668% 0 0 17.243%;
+	/* padding: 41.668% 0 0 17.243%; */
+	padding: 0 0 0 17.243%;
 }
 .featured-products-slider-text-heading {
 	margin-bottom: 1rem;
@@ -347,7 +359,7 @@
     align-items:stretch;
     overflow:hidden;
 
-    max-width:52.941rem;
+    /* max-width:52.941rem; */
     width:100%;
     
     min-height:100%;
@@ -356,22 +368,39 @@
     } */
 }
 
+@media only screen and (max-width:768px) {
+    .options {
+        padding: 1rem 1rem 0 1rem;
+    }
+}
+
 .options .option {
     position: relative;
     overflow:hidden;
 
     flex: 0 0 100%;
-    max-width:60px;
-    margin:10px;
+    max-width:5.923%;
+    margin:0.58rem;
+    padding-top: 35%;
 
     /* background:var(--optionBackground, var(--defaultBackground, #E6E9ED)); */
     background:#E6E9ED;
     background-size: auto 120%;
     background-position: center;
+    background-repeat: no-repeat;
 
     cursor: pointer;
 
     transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+@media only screen and (max-width:768px) {
+    .options .option { padding-top: 38%; }
+}
+@media only screen and (max-width:576px) {
+    .options .option { padding-top: 45%; }
+}
+@media only screen and (max-width:380px) {
+    .options .option { padding-top: 48%; }
 }
 
 .options .option:nth-child(1) { background-color: #ED5565; }
@@ -384,11 +413,11 @@
 .options .option.active {
     flex: 0 0 100%;
     
-    max-width:600px;
+    max-width:59.23%;
     margin:0px;
     border-radius:8px;
     
-    background-size:auto 100%;
+    background-size:cover;
 }
 
 .options .option.active:not(.active) {
@@ -407,7 +436,7 @@
                     <div class="featured-products-slider-text">
 
                         <div class="featured-products-slider-text-slides-cont active" id="featured-products-txt-slide1">
-                            <span class="featured-products-slider-text-number">01</span>
+                            <!-- <span class="featured-products-slider-text-number">01</span> -->
                             <div class="featured-products-slider-text-slide">
                                 <h4 class="featured-products-slider-text-heading">XYZ</h4>
                                 <p class="featured-products-slider-text-desc">Lorem ipsum dolor sit amet. Ut nostrum quia qui omnis veniam aut magnam rerum aut facere ipsum sit tenetur voluptatem.</p>
@@ -415,7 +444,7 @@
                             </div>
                         </div>
                         <div class="featured-products-slider-text-slides-cont" id="featured-products-txt-slide2">
-                            <span class="featured-products-slider-text-number">02</span>
+                            <!-- <span class="featured-products-slider-text-number">02</span> -->
                             <div class="featured-products-slider-text-slide">
                                 <h4 class="featured-products-slider-text-heading">XYZ</h4>
                                 <p class="featured-products-slider-text-desc">Lorem ipsum dolor sit amet. Ut nostrum quia qui omnis veniam aut magnam rerum aut facere ipsum sit tenetur voluptatem.</p>
@@ -423,7 +452,7 @@
                             </div>
                         </div>
                         <div class="featured-products-slider-text-slides-cont" id="featured-products-txt-slide3">
-                            <span class="featured-products-slider-text-number">03</span>
+                            <!-- <span class="featured-products-slider-text-number">03</span> -->
                             <div class="featured-products-slider-text-slide">
                                 <h4 class="featured-products-slider-text-heading">XYZ</h4>
                                 <p class="featured-products-slider-text-desc">Lorem ipsum dolor sit amet. Ut nostrum quia qui omnis veniam aut magnam rerum aut facere ipsum sit tenetur voluptatem.</p>
@@ -431,7 +460,7 @@
                             </div>
                         </div>
                         <div class="featured-products-slider-text-slides-cont" id="featured-products-txt-slide4">
-                            <span class="featured-products-slider-text-number">04</span>
+                            <!-- <span class="featured-products-slider-text-number">04</span> -->
                             <div class="featured-products-slider-text-slide">
                                 <h4 class="featured-products-slider-text-heading">XYZ</h4>
                                 <p class="featured-products-slider-text-desc">Lorem ipsum dolor sit amet. Ut nostrum quia qui omnis veniam aut magnam rerum aut facere ipsum sit tenetur voluptatem.</p>
@@ -439,7 +468,7 @@
                             </div>
                         </div>
                         <div class="featured-products-slider-text-slides-cont" id="featured-products-txt-slide5">
-                            <span class="featured-products-slider-text-number">05</span>
+                            <!-- <span class="featured-products-slider-text-number">05</span> -->
                             <div class="featured-products-slider-text-slide">
                                 <h4 class="featured-products-slider-text-heading">XYZ</h4>
                                 <p class="featured-products-slider-text-desc">Lorem ipsum dolor sit amet. Ut nostrum quia qui omnis veniam aut magnam rerum aut facere ipsum sit tenetur voluptatem.</p>
@@ -469,11 +498,11 @@
                 <div class="col-12 col-lg-8">
 
                     <div class="options featured-products-slider-image mx-auto">
-                        <div class="option featured-products-slider-slide active" id="featured-products-slide1" style="background-image:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);"></div>
-                        <div class="option featured-products-slider-slide" id="featured-products-slide2" style="background-image:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);"></div>
-                        <div class="option featured-products-slider-slide" id="featured-products-slide3" style="background-image:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);"></div>
-                        <div class="option featured-products-slider-slide" id="featured-products-slide4" style="background-image:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);"></div>
-                        <div class="option featured-products-slider-slide" id="featured-products-slide5" style="background-image:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);"></div>
+                        <a class="option featured-products-slider-slide active" href="#featured-products-slide1" id="featured-products-slide1" style="background-image:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);"></a>
+                        <a class="option featured-products-slider-slide" href="#featured-products-slide2" id="featured-products-slide2" style="background-image:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);"></a>
+                        <a class="option featured-products-slider-slide" href="#featured-products-slide3" id="featured-products-slide3" style="background-image:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);"></a>
+                        <a class="option featured-products-slider-slide" href="#featured-products-slide4" id="featured-products-slide4" style="background-image:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);"></a>
+                        <a class="option featured-products-slider-slide" href="#featured-products-slide5" id="featured-products-slide5" style="background-image:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);"></a>
                      </div>
 
                 </div>
@@ -481,49 +510,6 @@
         </div>
     </div> <!-- featured products content wrapper ends -->
 </section> <!-- Featured Products Section ends here -->
-
-<script>
-    $(".option").on("click", function(){
-        $(".option").removeClass("active");
-        $(this).addClass("active");
-    });
-
-    // featured products starts
-    $(".featured-products-slider-pagination-item").click((e) => {
-
-        e.preventDefault()
-        
-        $(".featured-products-slider-pagination-item").each(function(i, elem){
-            $(elem).removeClass('active');
-            e.currentTarget.className += ' active'
-            if (e.currentTarget.hash == `#featured-products-slide${i+1}`) {
-                $(".featured-products-slider-slide").removeClass('active');
-                $(".featured-products-slider-text-slides-cont").removeClass('active');
-                $(`#featured-products-slide${i+1}`).addClass('active')
-                $(`#featured-products-txt-slide${i+1}`).addClass('active')
-            }
-        })
-
-    })
-
-    $(".featured-products-slider-slide").click((e) => {
-        
-        $(".featured-products-slider-slide").each(function(i, elem){
-            $(elem).removeClass('active');
-            e.currentTarget.className += ' active'
-            if (e.currentTarget.hash == `#featured-products-slide${i+1}`) {
-                $(".featured-products-slider-slide").removeClass('active');
-                $(".featured-products-slider-pagination-item").removeClass('active');
-                $(".featured-products-slider-text-slides-cont").removeClass('active');
-                $(`#featured-products-slide${i+1}`).addClass('active')
-                $($(".featured-products-slider-pagination-item")[i]).addClass('active')
-                $(`#featured-products-txt-slide${i+1}`).addClass('active')
-            }
-        })
-
-    })
-    // featured products ends
-</script>
 
 <section id="overview" class="app-info section">
     <div class="container">

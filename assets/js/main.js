@@ -10,6 +10,49 @@
         document.querySelector('.preloader').style.display = 'none';
     }
 
+    // $(".option").on("click", function(){
+    //     $(".option").removeClass("active");
+    //     $(this).addClass("active");
+    // });
+
+    // featured products starts
+    $(".featured-products-slider-pagination-item").click((e) => {
+
+        e.preventDefault()
+        
+        $(".featured-products-slider-pagination-item").each(function(i, elem){
+            $(elem).removeClass('active');
+            e.currentTarget.className += ' active'
+            if (e.currentTarget.hash == `#featured-products-slide${i+1}`) {
+                $(".featured-products-slider-slide").removeClass('active');
+                $(".featured-products-slider-text-slides-cont").removeClass('active');
+                $(`#featured-products-slide${i+1}`).addClass('active')
+                $(`#featured-products-txt-slide${i+1}`).addClass('active')
+            }
+        })
+
+    })
+
+    $(".featured-products-slider-slide").click((e) => {
+        
+        e.preventDefault()
+        
+        $(".featured-products-slider-slide").each(function(i, elem){
+            $(elem).removeClass('active');
+            e.currentTarget.className += ' active'
+            if (e.currentTarget.hash == `#featured-products-slide${i+1}`) {
+                $(".featured-products-slider-slide").removeClass('active');
+                $(".featured-products-slider-pagination-item").removeClass('active');
+                $(".featured-products-slider-text-slides-cont").removeClass('active');
+                $(`#featured-products-slide${i+1}`).addClass('active')
+                $($(".featured-products-slider-pagination-item")[i]).addClass('active')
+                $(`#featured-products-txt-slide${i+1}`).addClass('active')
+            }
+        })
+
+    })
+    // featured products ends
+
     /*=====================================
     Sticky
     ======================================= */
