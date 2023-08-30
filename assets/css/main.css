@@ -1389,7 +1389,7 @@ ol {
 }
 .featured-products-slider-text-heading {
 	margin-bottom: 1rem;
-  font-family: MetaProBold;
+  /* font-family: MetaProBold; */
   font-size: 3rem;
   font-weight: bold;
   line-height: normal;
@@ -1400,7 +1400,7 @@ ol {
 	margin-bottom: 1.25rem;
 	max-width: 360px;
 	width: 90.63%;
-  font-family: MetaProRegular;
+  /* font-family: MetaProRegular; */
   font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.33;
