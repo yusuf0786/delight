@@ -35,7 +35,8 @@ p {
 
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .navbar-toggler:focus,
@@ -1337,6 +1338,241 @@ ol {
     text-align: center
 }
 
+/* Featured Products Section */
+.featured-products-wrapper { padding-top: 100px; }
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .featured-products-wrapper { padding-top: 60px; }
+}
+
+@media only screen and (max-width:767px) {
+    .featured-products-wrapper { padding-top: 50px; }
+}
+
+.featured-products-slider-text {
+	position: relative;
+	height: 100%;
+    padding-bottom: 2rem;
+}
+.featured-products-slider-text-slides-cont {
+	display: none;
+	height: 100%;
+}
+.featured-products-slider-text-slides-cont.active {
+	display: block;
+}
+.featured-products-bg-one {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.featured-products-bg-two {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.featured-products-slider-text-number {
+	position: absolute;
+	top: 2.5%;
+	left: -100px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 23.125rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(215, 206, 178, 0.25);
+}
+.featured-products-slider-text-slide {
+	position: relative;
+	/* padding: 41.668% 0 0 17.243%; */
+	padding: 0 0 0 17.243%;
+}
+.featured-products-slider-text-heading {
+	margin-bottom: 1rem;
+  font-family: MetaProBold;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  color: #36322d;
+}
+.featured-products-slider-text-desc {
+	margin-bottom: 1.25rem;
+	max-width: 360px;
+	width: 90.63%;
+  font-family: MetaProRegular;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #36322d;
+}
+.featured-products-slider-text-link {
+	display: inline-block;
+  font-family: MetaProBold;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #7a7a87;
+}
+.featured-products-slider-text-link img {
+	margin-left: 0.625rem;
+	width: 20px;
+	filter: invert(53%) sepia(16%) saturate(219%) hue-rotate(202deg) brightness(88%) contrast(92%);
+	vertical-align: -3px;
+}
+.featured-products-slider-text-link:hover {
+	color: #e77400;
+}
+.featured-products-slider-text-link:hover img {
+	filter: invert(68%) sepia(68%) saturate(6782%) hue-rotate(14deg) brightness(104%) contrast(101%);
+}
+.featured-products-slider-pagination {
+	padding-left: 17.243%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-items: center;
+	transition: .3s opacity;
+	z-index: 10;
+}
+.featured-products-slider-pagination-item {
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}
+.featured-products-slider-pagination-number {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+	color: #f5c799;
+}
+.featured-products-slider-pagination-item .featured-products-slider-pagination-number::after {
+	display: inline-block;
+	content: "";
+	width: 0;
+	height: 3px;
+	background: #e77400;
+	vertical-align: 5px;
+	transition: .3s width;
+}
+.featured-products-slider-pagination-item:last-child,
+.featured-products-slider-pagination-item:nth-last-child(2) {
+	margin-right: 0;
+}
+.featured-products-slider-pagination-item:last-child {
+	margin-left: 30px;
+}
+.featured-products-slider-pagination-item:last-child .featured-products-slider-pagination-number::after {
+	display: none;
+}
+.featured-products-slider-pagination-item:last-child .featured-products-slider-pagination-number::before {
+	display: inline-block;
+	content: "";
+	width: 0;
+	height: 3px;
+	background: #e77400;
+	vertical-align: 5px;
+	transition: .3s width;
+}
+.featured-products-slider-pagination-item.active {
+	margin-right: 0;
+}
+.featured-products-slider-pagination-item:last-child.active,
+.featured-products-slider-pagination-item:nth-last-child(2).active + .featured-products-slider-pagination-item {
+	margin-left: 0;
+}
+.featured-products-slider-pagination-item.active .featured-products-slider-pagination-number::after,
+.featured-products-slider-pagination-item.active .featured-products-slider-pagination-number::before {
+	width: 40px;
+	margin: 0 10px;
+}
+.featured-products-slider-pagination-item.active .featured-products-slider-pagination-number {
+	margin-right: 0;
+	font-weight: bold;
+	color: #e77400;
+}
+
+.options {
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;
+    overflow:hidden;
+
+    /* max-width:52.941rem; */
+    width:100%;
+    
+    min-height:100%;
+    /* @media screen and (max-width:798px - $i*80) {
+        min-width:600px - $i*80;
+    } */
+}
+
+@media only screen and (max-width:768px) {
+    .options {
+        padding: 1rem 1rem 0 1rem;
+    }
+}
+
+.options .option {
+    position: relative;
+    overflow:hidden;
+
+    flex: 0 0 100%;
+    max-width:5.923%;
+    margin:0.58rem;
+    padding-top: 35%;
+
+    /* background:var(--optionBackground, var(--defaultBackground, #E6E9ED)); */
+    background:#E6E9ED;
+    background-size: auto 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+@media only screen and (max-width:768px) {
+    .options .option { padding-top: 38%; }
+}
+@media only screen and (max-width:576px) {
+    .options .option { padding-top: 45%; }
+}
+@media only screen and (max-width:380px) {
+    .options .option { padding-top: 48%; }
+}
+
+.options .option:nth-child(1) { background-color: #ED5565; }
+.options .option:nth-child(2) { background-color: #FC6E51; }
+.options .option:nth-child(3) { background-color: #FFCE54; }
+.options .option:nth-child(4) { background-color: #2ECC71; }
+.options .option:nth-child(5) { background-color: #5D9CEC; }
+.options .option:nth-child(6) { background-color: #AC92EC; }
+
+.options .option.active {
+    flex: 0 0 100%;
+    
+    max-width:59.23%;
+    margin:0px;
+    border-radius:8px;
+    
+    background-size:cover;
+}
+
+.options .option.active:not(.active) {
+    flex-grow:1;
+    border-radius:4px;
+}
+/* Featured Products Section ends */
+
 .preloader {
     position: fixed;
     top: 0;
@@ -1613,7 +1849,7 @@ ol {
     background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
-    padding: 12px 30px
+    padding: 0.7rem 1.764rem;
 }
 
 .header .button .btn:hover {
@@ -1773,7 +2009,7 @@ ol {
 .navbar-nav .nav-item {
     z-index: 1;
     position: relative;
-    margin-right: 40px
+    margin-right: 2.35rem
 }
 
 .navbar-nav .nav-item:last-child {
