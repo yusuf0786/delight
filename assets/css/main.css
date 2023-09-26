@@ -26,6 +26,64 @@ body {
     font-size: 15px
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ccc;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 0;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
+}
+
+/* ::-webkit-scrollbar-button {
+    background: #007aff;
+} */
+/* Buttons */
+::-webkit-scrollbar-button {
+    display: block;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment {
+    display: none;
+}
+/* up arrow */
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/64/64589.png');
+}
+/* down arrow */
+::-webkit-scrollbar-button:vertical:end:increment {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/25/25243.png');
+}
+
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+/* ::-webkit-scrollbar-corner {
+    background: transparent;
+    width: 0;
+    height: 0;
+    border-left: 16px solid #8B7E79;
+    border-top: 16px solid #8B7E79;
+    border-bottom: 16px solid transparent;
+    border-right: 16px solid transparent;
+} */
+
 p {
     margin: 0;
     padding: 0;
@@ -63,6 +121,7 @@ button:focus,
 
 select {
     -webkit-writing-mode: horizontal-tb !important;
+    writing-mode: horizontal-tb !important;
     text-rendering: auto;
     color: #081828;
     letter-spacing: normal;
@@ -4026,7 +4085,7 @@ blockquote span {
 @media only screen and (min-width:768px) and (max-width:991px),
 (max-width:767px) {
     .team .single-team .text {
-        text-align: center
+        text-align: center;
     }
 }
 
